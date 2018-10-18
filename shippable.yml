@@ -3,6 +3,7 @@ language: none # Ada
 branches:
     only:
         - master
+        - stable
         - testing
 
 env:

@@ -1,0 +1,26 @@
+ALR
+===
+master:
+    Base for development into which PRs are merged. CI tested.
+stable:
+    Branch for installations/updates in user machines. CI tested.
+master-index-status:
+    Branch for CI test reports from master branch
+stable-index-status:
+    Branch for CI test reports from stable branch
+
+private branches
+----------------
+testing:
+    CI-tested branch to prepare merges into master
+devel:
+    Breaking changes of short scope
+experimental:
+    Breaking changes of dubious future or long scope
+
+ALIRE
+=====
+master:
+    Live index into which PRs are merged. CI tested.
+
+Alire is a submodule in alr/deps/alire. Since commits to master are not used automatically by alr (until an explicit commit is made the subrepo index), there is no risk of breakage.
