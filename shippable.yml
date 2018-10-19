@@ -17,7 +17,7 @@ build:
         image_tag: latest
         pull: true
     ci:
-        - apt-get install -y bash lsb-release mercurial
+        - apt-get install -y bash lsb-release mercurial subversion
         - git submodule update --init --recursive
         - scripts/shiptest.sh
     on_success:
