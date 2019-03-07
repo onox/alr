@@ -1,8 +1,8 @@
-with Alire.Index.Libgraph_Easy_Perl;
-
 with Alr.Dependency_Graphs;
 with Alr.Origins;
+with Alr.OS_Lib;
 with Alr.Parsers;
+with Alr.Paths;
 with Alr.Platform;
 
 with Semantic_Versioning;
@@ -70,7 +70,7 @@ package body Alr.Commands.Show is
                                     .From_Instance (Needed.Releases)
                                     .Including (Rel);
                      begin
-                        if Origins.New_Origin (Alire.Index.Libgraph_Easy_Perl.V_Rolling.Origin).Already_Installed then -- plot
+                        if OS_Lib.Exists_In_Path (Paths.Scripts_Graph_Easy) then
                            Graph.Plot (Needed.Releases.Including (Rel));
                         else          -- textual
                            Graph.Print (Needed.Releases.Including (Rel),
